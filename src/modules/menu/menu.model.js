@@ -146,7 +146,9 @@ class MenuModel extends BaseModel {
   }
 
   async getCategories() {
-    const [rows] = await pool.execute('SELECT * FROM menu_categories WHERE deletedAt IS NULL ORDER BY sortOrder ASC, id ASC');
+    const [rows] = await pool.execute(
+      'SELECT id, category_name, icon, slug, color, sortOrder, parent_id FROM menu_categories WHERE deletedAt IS NULL ORDER BY COALESCE(parent_id, id) ASC, parent_id IS NOT NULL ASC, sortOrder ASC, id ASC'
+    );
     return rows;
   }
 
