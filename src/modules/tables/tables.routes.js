@@ -9,6 +9,7 @@ router.get('/', tablesController.getAllTables);
 router.get('/zones', tablesController.getZones);
 router.post('/', authorize('admin', 'manager'), tablesController.createTable);
 router.patch('/:id/status', authorize('admin', 'manager', 'waiter'), tablesController.updateStatus);
+router.patch('/:id', authorize('admin', 'manager'), tablesController.updateTable);
 router.delete('/:id', authorize('admin', 'manager'), tablesController.deleteTable);
 
 module.exports = router;

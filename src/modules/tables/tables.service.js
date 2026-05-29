@@ -118,6 +118,33 @@ class TablesService {
     return await tablesModel.create(payload);
   }
 
+  async updateTable(id, data) {
+    let zone_id = data.zone_id || null;
+
+    if (data.floor && !zone_id) {
+      const zones = await tablesModel.getZones();
+      let zone = zones.find(z => z.zone_name.toLowerCase() === data.floor.toLowerCase());
+      
+      if (zone) {
+        zone_id = zone.id;
+      } else {
+        const [result] = await pool.execute(
+          'INSERT INTO table_zones (zone_name) VALUES (?)',
+          [data.floor]
+        );
+        zone_id = result.insertId;
+      }
+    }
+
+    const payload = {
+      table_code: data.name,
+      capacity: data.capacity,
+      zone_id: zone_id || 1
+    };
+
+    return await tablesModel.update(id, payload);
+  }
+
   async deleteTable(id) {
     return await tablesModel.softDelete(id);
   }
