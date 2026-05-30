@@ -35,6 +35,49 @@ class AuthService {
     };
   }
 
+  async register(fullName, email, password) {
+    // Check if user already exists
+    let existingUser = await authModel.findWithRole(email);
+    if (existingUser) {
+      throw new Error('Email is already registered');
+    }
+
+    // Find the customer role ID
+    let roleId = await authModel.findRoleByName('customer');
+    if (!roleId) {
+      roleId = 6; // fallback to 6 (default customer role ID in seeder)
+    }
+
+    // Hash the password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Create user
+    await authModel.create({
+      full_name: fullName,
+      email: email,
+      password: hashedPassword,
+      role_id: roleId,
+      avatar: null,
+      status: 'active'
+    });
+
+    // Fetch the newly created user details
+    const user = await authModel.findWithRole(email);
+
+    const token = jwt.sign(
+      { id: user.id, email: user.email, role: user.role_name },
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRE }
+    );
+
+    const { password: _, ...userWithoutPassword } = user;
+
+    return {
+      user: userWithoutPassword,
+      token
+    };
+  }
+
   async googleLogin(idToken) {
     const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
     
