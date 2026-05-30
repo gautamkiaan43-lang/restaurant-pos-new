@@ -1,0 +1,52 @@
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 680,
+    "quantity": 1,
+    "unit_price": 10.6,
+    "total_price": 10.6,
+    "addons": [
+      {
+        "name": "ALMOND MILK",
+        "price": 0.7
+      },
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 749,
+    "quantity": 1,
+    "unit_price": 6.5,
+    "total_price": 6.5,
+    "addons": [
+      {
+        "name": "Add Honey",
+        "price": 0.3
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 688,
+    "quantity": 1,
+    "unit_price": 22,
+    "total_price": 22,
+    "addons": [
+      {
+        "name": "Extra Red Pickled Cabbage",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Quinoa",
+    "size_price": null
+  }
+]

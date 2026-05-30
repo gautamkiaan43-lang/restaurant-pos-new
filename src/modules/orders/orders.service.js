@@ -78,7 +78,10 @@ class OrdersService {
       const orderId = await ordersRepository.create(dbOrderData);
 
       // 2. Create Order Items — now with addons, size_name, size_price, notes
-      for (const item of items) {
+      // Filter out corrupted items that have no valid menu_item_id
+      const validItems = items.filter(i => i.menu_item_id && String(i.menu_item_id).length < 12);
+      
+      for (const item of validItems) {
         // Serialize addons array to JSON string
         const addonsStr = item.addons
           ? (typeof item.addons === 'string' ? item.addons : JSON.stringify(item.addons))

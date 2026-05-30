@@ -26,6 +26,31 @@ class AuthController {
     }
   }
 
+  async register(req, res) {
+    try {
+      const { fullName, email, password } = req.body;
+      if (!fullName || !email || !password) {
+        return res.status(400).json({
+          success: false,
+          message: 'Full name, email, and password are required'
+        });
+      }
+
+      const result = await authService.register(fullName, email, password);
+
+      res.json({
+        success: true,
+        message: 'Registration successful',
+        data: result
+      });
+    } catch (err) {
+      res.status(400).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
   async googleLogin(req, res) {
     try {
       const { token } = req.body;

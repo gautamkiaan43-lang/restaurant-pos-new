@@ -55,6 +55,12 @@ class TablesModel extends BaseModel {
     const [rows] = await pool.execute('SELECT * FROM table_zones WHERE deletedAt IS NULL');
     return rows;
   }
+
+  async softDelete(id) {
+    const sql = `UPDATE ${this.tableName} SET table_code = CONCAT(table_code, '_del_', UNIX_TIMESTAMP()), deletedAt = NOW() WHERE id = ?`;
+    const [result] = await pool.execute(sql, [id]);
+    return result.affectedRows;
+  }
 }
 
 module.exports = new TablesModel();

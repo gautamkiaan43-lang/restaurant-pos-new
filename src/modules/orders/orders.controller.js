@@ -35,6 +35,7 @@ class OrdersController {
   async createOrder(req, res) {
     try {
       const { orderData, items } = req.body;
+      require('fs').appendFileSync('debug.log', "ITEMS RECEIVED IN BACKEND: " + JSON.stringify(items, null, 2) + "\n");
       const { orderId, serviceChargeAmount, grandTotal } = await ordersService.createOrder(orderData, items);
       return sendSuccess(res, 'Order created successfully', { 
         id: orderId,
