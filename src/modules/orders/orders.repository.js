@@ -16,6 +16,11 @@ class OrdersRepository extends BaseModel {
       params.push(filters.status);
     }
 
+    if (filters.paymentStatus) {
+      sql += ` AND o.payment_status = ?`;
+      params.push(filters.paymentStatus);
+    }
+
     if (filters.customerId) {
       sql += ` AND o.customer_id = ?`;
       params.push(filters.customerId);
@@ -26,7 +31,7 @@ class OrdersRepository extends BaseModel {
       params.push(filters.userId);
     }
 
-    sql += ` ORDER BY o.createdAt DESC`;
+    sql += ` ORDER BY o.createdAt DESC LIMIT 50`;
 
     const [rows] = await pool.execute(sql, params);
     

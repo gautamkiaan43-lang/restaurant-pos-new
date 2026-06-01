@@ -4,8 +4,8 @@ const { sendSuccess, sendError } = require('../../utils/response.formatter');
 class OrdersController {
   async getAllOrders(req, res) {
     try {
-      const { status, customerId, userId } = req.query;
-      const orders = await ordersService.getAllOrders({ status, customerId, userId });
+      const { status, customerId, userId, paymentStatus } = req.query;
+      const orders = await ordersService.getAllOrders({ status, customerId, userId, paymentStatus });
       const mappedOrders = orders.map(order => ({
         ...order,
         serviceChargePercent: order.service_charge_percent,

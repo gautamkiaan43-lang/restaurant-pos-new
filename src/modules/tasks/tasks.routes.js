@@ -8,6 +8,7 @@ router.use(authenticate);
 router.get('/', tasksController.getAllTasks);
 router.post('/', authorize('admin', 'manager'), tasksController.createTask);
 router.patch('/:id/status', tasksController.updateStatus);
+router.put('/:id', authorize('admin', 'manager'), tasksController.updateTask);
 router.delete('/:id', authorize('admin', 'manager'), tasksController.deleteTask);
 
 module.exports = router;

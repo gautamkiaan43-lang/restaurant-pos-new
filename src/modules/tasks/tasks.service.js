@@ -32,6 +32,19 @@ class TasksService {
     return await tasksModel.update(id, { task_status: status });
   }
 
+  async updateTask(id, data) {
+    const payload = {
+      title: data.title,
+      category: data.type || data.category,
+      priority: (data.priority === 'Normal' ? 'medium' : data.priority === 'Urgent' ? 'urgent' : data.priority?.toLowerCase() || 'medium'),
+      assigned_to: data.assignee_id || data.assigned_to,
+      location: data.target || data.location,
+      description: data.description || '',
+      deadline: data.deadline === 'Today' ? new Date() : (data.deadline || null)
+    };
+    return await tasksModel.update(id, payload);
+  }
+
   async deleteTask(id) {
     return await tasksModel.softDelete(id);
   }
