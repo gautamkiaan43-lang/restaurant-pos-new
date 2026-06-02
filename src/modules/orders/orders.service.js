@@ -74,8 +74,66 @@ class OrdersService {
     await connection.beginTransaction();
 
     try {
-      // 1. Create Order
-      const orderId = await ordersRepository.create(dbOrderData);
+      // 1. Create or Update Order
+      let orderId;
+      let existingOrder = null;
+
+      if (dbOrderData.table_id) {
+        const [rows] = await connection.execute(
+          'SELECT id, order_number FROM orders WHERE table_id = ? AND payment_status = "pending" AND deletedAt IS NULL LIMIT 1',
+          [dbOrderData.table_id]
+        );
+        if (rows.length > 0) {
+          existingOrder = rows[0];
+        }
+      }
+
+      if (existingOrder) {
+        orderId = existingOrder.id;
+        dbOrderData.order_number = existingOrder.order_number; // Keep the same order number
+        
+        await connection.execute(
+          `UPDATE orders SET 
+            subtotal = ?, tax = ?, discount = ?, 
+            service_charge_percent = ?, service_charge_amount = ?, grand_total = ?, 
+            payment_status = ?, order_status = ?, notes = ?
+           WHERE id = ?`,
+          [
+            dbOrderData.subtotal,
+            dbOrderData.tax,
+            dbOrderData.discount,
+            dbOrderData.service_charge_percent,
+            dbOrderData.service_charge_amount,
+            dbOrderData.grand_total,
+            dbOrderData.payment_status,
+            dbOrderData.order_status,
+            dbOrderData.notes,
+            orderId
+          ]
+        );
+
+        // Delete previous items for this running order so we can re-insert them cleanly
+        await connection.execute(
+          'DELETE FROM order_items WHERE order_id = ?',
+          [orderId]
+        );
+      } else {
+        orderId = await ordersRepository.create(dbOrderData);
+      }
+
+      // If paid via House Tab/Khata, insert a CHARGE transaction in the ledger
+      if ((orderData.paymentMethod === 'House Tab' || orderData.payment_method === 'House Tab') && orderData.houseAccountId) {
+        await connection.execute(
+          `INSERT INTO house_account_transactions (house_account_id, order_id, amount, transaction_type, notes)
+           VALUES (?, ?, ?, 'CHARGE', ?)`,
+          [
+            orderData.houseAccountId,
+            orderId,
+            grandTotal,
+            `Charged to Tab: Order #${dbOrderData.order_number}`
+          ]
+        );
+      }
 
       // 2. Create Order Items — now with addons, size_name, size_price, notes
       // Filter out corrupted items that have no valid menu_item_id
@@ -116,12 +174,26 @@ class OrdersService {
         );
       }
 
+      // Update restaurant table status based on order payment status
+      if (dbOrderData.table_id) {
+        const nextTableStatus = dbOrderData.payment_status === 'paid' ? 'available' : 'occupied';
+        await connection.execute(
+          'UPDATE restaurant_tables SET status = ? WHERE id = ?',
+          [nextTableStatus, dbOrderData.table_id]
+        );
+      }
+
       await connection.commit();
 
       // 3. Socket Notification
       const io = getIO();
       io.emit('new_order', { id: orderId, order_number: dbOrderData.order_number });
       io.to('chef').emit('new_kitchen_ticket', { orderId });
+      
+      if (dbOrderData.table_id) {
+        const nextTableStatus = dbOrderData.payment_status === 'paid' ? 'available' : 'occupied';
+        io.emit('table_status_update', { id: dbOrderData.table_id, status: nextTableStatus });
+      }
 
       // 4. Save Notification
       await notificationService.createNotification({

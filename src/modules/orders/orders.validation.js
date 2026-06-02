@@ -17,7 +17,9 @@ const createOrderSchema = Joi.object({
     grand_total: Joi.number().required(),
     payment_status: Joi.string().optional(),
     order_status: Joi.string().optional(),
-    notes: Joi.string().allow('', null).optional()
+    notes: Joi.string().allow('', null).optional(),
+    paymentMethod: Joi.string().allow('', null).optional(),
+    houseAccountId: Joi.alternatives().try(Joi.number().integer(), Joi.string()).allow(null).optional()
   }).required(),
   items: Joi.array().items(
     Joi.object({

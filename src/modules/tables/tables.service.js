@@ -78,8 +78,11 @@ class TablesService {
         }
       }
     } else if (status === 'available') {
-      // If table becomes available, we might want to mark the pending order as cancelled or handled
-      // But usually it's handled via "Finalize" in the UI which marks it as paid.
+      // Mark the active pending order as paid so the session closes completely
+      await pool.execute(
+        'UPDATE orders SET payment_status = "paid" WHERE table_id = ? AND payment_status = "pending" AND deletedAt IS NULL',
+        [id]
+      );
     }
 
     // Notify all clients about table status change

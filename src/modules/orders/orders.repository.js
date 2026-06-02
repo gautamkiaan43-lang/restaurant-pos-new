@@ -31,6 +31,11 @@ class OrdersRepository extends BaseModel {
       params.push(filters.userId);
     }
 
+    if (filters.tableId) {
+      sql += ` AND o.table_id = ?`;
+      params.push(filters.tableId);
+    }
+
     sql += ` ORDER BY o.createdAt DESC LIMIT 50`;
 
     const [rows] = await pool.execute(sql, params);

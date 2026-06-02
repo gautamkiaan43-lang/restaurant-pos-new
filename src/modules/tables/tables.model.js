@@ -15,7 +15,17 @@ class TablesModel extends BaseModel {
              g_ord.full_name as customer_name
       FROM restaurant_tables t 
       JOIN table_zones z ON t.zone_id = z.id 
-      LEFT JOIN orders o ON t.id = o.table_id AND o.payment_status = 'pending' AND o.deletedAt IS NULL
+      LEFT JOIN (
+        SELECT o1.* FROM orders o1
+        WHERE o1.id = (
+          SELECT id FROM orders o2 
+          WHERE o2.table_id = o1.table_id 
+          AND o2.payment_status = 'pending' 
+          AND o2.deletedAt IS NULL
+          ORDER BY o2.createdAt DESC
+          LIMIT 1
+        )
+      ) o ON t.id = o.table_id
       LEFT JOIN guests g_ord ON o.customer_id = g_ord.id
       LEFT JOIN (
         SELECT r1.* FROM reservations r1
