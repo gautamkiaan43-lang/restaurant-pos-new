@@ -79,6 +79,52 @@ class MenuController {
       });
     }
   }
+
+  async createCategory(req, res) {
+    try {
+      const categoryId = await menuService.createCategory(req.body);
+      res.status(201).json({
+        success: true,
+        message: 'Category created successfully',
+        data: { id: categoryId }
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
+  async updateCategory(req, res) {
+    try {
+      await menuService.updateCategory(req.params.id, req.body);
+      res.json({
+        success: true,
+        message: 'Category updated successfully'
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
+  async deleteCategory(req, res) {
+    try {
+      await menuService.deleteCategory(req.params.id);
+      res.json({
+        success: true,
+        message: 'Category deleted successfully'
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
 }
 
 module.exports = new MenuController();

@@ -65,6 +65,21 @@ class TablesController {
     }
   }
 
+  async updateTable(req, res) {
+    try {
+      await tablesService.updateTable(req.params.id, req.body);
+      res.json({
+        success: true,
+        message: 'Table updated successfully'
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
   async deleteTable(req, res) {
     try {
       await tablesService.deleteTable(req.params.id);

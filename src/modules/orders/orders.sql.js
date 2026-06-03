@@ -16,7 +16,7 @@ const queries = {
     WHERE o.id = ? AND o.deletedAt IS NULL
   `,
   getOrderItems: `
-    SELECT oi.*, mi.item_name, mi.image 
+    SELECT oi.*, mi.item_name, mi.image, mi.addons as menu_addons, mi.sizes as menu_sizes
     FROM order_items oi 
     JOIN menu_items mi ON oi.menu_item_id = mi.id 
     WHERE oi.order_id = ? AND oi.deletedAt IS NULL

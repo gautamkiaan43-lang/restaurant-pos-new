@@ -1,0 +1,1652 @@
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 680,
+    "quantity": 1,
+    "unit_price": 10.6,
+    "total_price": 10.6,
+    "addons": [
+      {
+        "name": "ALMOND MILK",
+        "price": 0.7
+      },
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 749,
+    "quantity": 1,
+    "unit_price": 6.5,
+    "total_price": 6.5,
+    "addons": [
+      {
+        "name": "Add Honey",
+        "price": 0.3
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 688,
+    "quantity": 1,
+    "unit_price": 22,
+    "total_price": 22,
+    "addons": [
+      {
+        "name": "Extra Red Pickled Cabbage",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Quinoa",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 789,
+    "quantity": 1,
+    "unit_price": 0.5,
+    "total_price": 0.5,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 688,
+    "quantity": 5,
+    "unit_price": 15.5,
+    "total_price": 77.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 787,
+    "quantity": 1,
+    "unit_price": 50,
+    "total_price": 50,
+    "addons": null,
+    "size_name": null,
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 710,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 689,
+    "quantity": 1,
+    "unit_price": 15.5,
+    "total_price": 15.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 691,
+    "quantity": 1,
+    "unit_price": 27.5,
+    "total_price": 27.5,
+    "addons": null,
+    "size_name": "Regular Portion",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 690,
+    "quantity": 1,
+    "unit_price": 15.5,
+    "total_price": 15.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 692,
+    "quantity": 1,
+    "unit_price": 19.5,
+    "total_price": 19.5,
+    "addons": null,
+    "size_name": "Bacon Option",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 695,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 710,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 702,
+    "quantity": 1,
+    "unit_price": 16.5,
+    "total_price": 16.5,
+    "addons": null,
+    "size_name": "Regular Portion",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 696,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 703,
+    "quantity": 1,
+    "unit_price": 24.5,
+    "total_price": 24.5,
+    "addons": null,
+    "size_name": "Regular Portion",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 702,
+    "quantity": 1,
+    "unit_price": 16.5,
+    "total_price": 16.5,
+    "addons": null,
+    "size_name": "Regular Portion",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 698,
+    "quantity": 1,
+    "unit_price": 16.5,
+    "total_price": 16.5,
+    "addons": null,
+    "size_name": "Potato",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 10.8,
+    "total_price": 10.8,
+    "addons": [
+      {
+        "name": "ADD GINGER & LEMON",
+        "price": 0.8
+      },
+      {
+        "name": "ADD LEMON",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 692,
+    "quantity": 1,
+    "unit_price": 19.5,
+    "total_price": 19.5,
+    "addons": null,
+    "size_name": "Bacon Option",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 693,
+    "quantity": 1,
+    "unit_price": 24,
+    "total_price": 24,
+    "addons": null,
+    "size_name": "With Eggs",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 780,
+    "quantity": 1,
+    "unit_price": 10.6,
+    "total_price": 10.6,
+    "addons": [
+      {
+        "name": "LACTOSE-FREE MILK",
+        "price": 0.7
+      },
+      {
+        "name": "COCONUT MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 690,
+    "quantity": 1,
+    "unit_price": 17,
+    "total_price": 17,
+    "addons": [
+      {
+        "name": "Extra Red Pickled Cabbage",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 689,
+    "quantity": 1,
+    "unit_price": 18,
+    "total_price": 18,
+    "addons": [
+      {
+        "name": "Extra Avocado",
+        "price": 2.5
+      }
+    ],
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 690,
+    "quantity": 1,
+    "unit_price": 19.5,
+    "total_price": 19.5,
+    "addons": [
+      {
+        "name": "Extra Red Pickled Cabbage",
+        "price": 1.5
+      },
+      {
+        "name": "Extra Avocado",
+        "price": 2.5
+      }
+    ],
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 716,
+    "quantity": 1,
+    "unit_price": 7.5,
+    "total_price": 7.5,
+    "addons": null,
+    "size_name": "Double",
+    "size_price": 3.5
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 10.3,
+    "total_price": 10.3,
+    "addons": [
+      {
+        "name": "ADD GINGER & LEMON",
+        "price": 0.8
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ADD LEMON",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 696,
+    "quantity": 1,
+    "unit_price": 19,
+    "total_price": 19,
+    "addons": [
+      {
+        "name": "Gluten-Free Wrap Option",
+        "price": 3
+      },
+      {
+        "name": "Extra Cheese",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Regular Size",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 763,
+    "quantity": 1,
+    "unit_price": 14.9,
+    "total_price": 14.9,
+    "addons": [
+      {
+        "name": "OAT MILK",
+        "price": 0.7
+      },
+      {
+        "name": "LACTOSE-FREE MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 757,
+    "quantity": 1,
+    "unit_price": 10.700000000000001,
+    "total_price": 10.7,
+    "addons": [
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      },
+      {
+        "name": "OAT MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 10.3,
+    "total_price": 10.3,
+    "addons": [
+      {
+        "name": "ADD GINGER & LEMON",
+        "price": 0.8
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ADD LEMON",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 757,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ALMOND MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 718,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "1 Sausage",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 690,
+    "quantity": 1,
+    "unit_price": 17,
+    "total_price": 17,
+    "addons": [
+      {
+        "name": "Extra Salads",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 732,
+    "quantity": 1,
+    "unit_price": 5.7,
+    "total_price": 5.7,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 732,
+    "quantity": 1,
+    "unit_price": 5.7,
+    "total_price": 5.7,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 696,
+    "quantity": 1,
+    "unit_price": 17.5,
+    "total_price": 17.5,
+    "addons": [
+      {
+        "name": "Gluten-Free Wrap Option",
+        "price": 3
+      }
+    ],
+    "size_name": "Regular Size",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 732,
+    "quantity": 1,
+    "unit_price": 5.7,
+    "total_price": 5.7,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 702,
+    "quantity": 1,
+    "unit_price": 18.5,
+    "total_price": 18.5,
+    "addons": [
+      {
+        "name": "Gluten-Free Option",
+        "price": 2
+      }
+    ],
+    "size_name": "Regular Portion",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 700,
+    "quantity": 1,
+    "unit_price": 7.5,
+    "total_price": 7.5,
+    "addons": null,
+    "size_name": "Sourdough",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 703,
+    "quantity": 1,
+    "unit_price": 24.5,
+    "total_price": 24.5,
+    "addons": null,
+    "size_name": "Regular Portion",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 697,
+    "quantity": 1,
+    "unit_price": 17,
+    "total_price": 17,
+    "addons": [
+      {
+        "name": "Extra Cheese",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Regular Size",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 695,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 698,
+    "quantity": 1,
+    "unit_price": 16.5,
+    "total_price": 16.5,
+    "addons": null,
+    "size_name": "Potato",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 697,
+    "quantity": 1,
+    "unit_price": 17,
+    "total_price": 17,
+    "addons": [
+      {
+        "name": "Extra Cheese",
+        "price": 1.5
+      }
+    ],
+    "size_name": "Regular Size",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 695,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 698,
+    "quantity": 1,
+    "unit_price": 16.5,
+    "total_price": 16.5,
+    "addons": null,
+    "size_name": "Potato",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 716,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "Single",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 758,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 714,
+    "quantity": 1,
+    "unit_price": 5.5,
+    "total_price": 5.5,
+    "addons": null,
+    "size_name": "Regular Slice",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 758,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 714,
+    "quantity": 1,
+    "unit_price": 5.5,
+    "total_price": 5.5,
+    "addons": null,
+    "size_name": "Regular Slice",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 695,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 712,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 711,
+    "quantity": 1,
+    "unit_price": 12.5,
+    "total_price": 12.5,
+    "addons": null,
+    "size_name": "Regular Baguette",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 758,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 714,
+    "quantity": 1,
+    "unit_price": 5.5,
+    "total_price": 5.5,
+    "addons": null,
+    "size_name": "Regular Slice",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 695,
+    "quantity": 1,
+    "unit_price": 14.5,
+    "total_price": 14.5,
+    "addons": null,
+    "size_name": "Regular Size",
+    "size_price": 0
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 757,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "OAT MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 716,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "Single",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 717,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "2 Rashers",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 716,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "Single",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 717,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "2 Rashers",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 755,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ADD LEMON",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 757,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 718,
+    "quantity": 1,
+    "unit_price": 7.5,
+    "total_price": 7.5,
+    "addons": null,
+    "size_name": "2 Sausages",
+    "size_price": 3.5
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 786,
+    "quantity": 1,
+    "unit_price": 10.3,
+    "total_price": 10.3,
+    "addons": [
+      {
+        "name": "ADD GINGER & LEMON",
+        "price": 0.8
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": 0
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 716,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "Single",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 717,
+    "quantity": 1,
+    "unit_price": 4,
+    "total_price": 4,
+    "addons": null,
+    "size_name": "2 Rashers",
+    "size_price": 0
+  },
+  {
+    "menu_item_id": 755,
+    "quantity": 1,
+    "unit_price": 9.3,
+    "total_price": 9.3,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": 0
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 702,
+    "quantity": 1,
+    "unit_price": 18.5,
+    "total_price": 18.5,
+    "addons": [
+      {
+        "name": "Gluten-Free Option",
+        "price": 2
+      }
+    ],
+    "size_name": "Regular Portion",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ADD LEMON",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  },
+  {
+    "menu_item_id": 784,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 784,
+    "quantity": 1,
+    "unit_price": 10,
+    "total_price": 10,
+    "addons": [
+      {
+        "name": "ADD GINGER",
+        "price": 0.5
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 688,
+    "quantity": 1,
+    "unit_price": 15.5,
+    "total_price": 15.5,
+    "addons": null,
+    "size_name": "Rice Vermicelli",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 785,
+    "quantity": 1,
+    "unit_price": 9.5,
+    "total_price": 9.5,
+    "addons": null,
+    "size_name": "Regular",
+    "size_price": null
+  }
+]
+ITEMS RECEIVED IN BACKEND: [
+  {
+    "menu_item_id": 756,
+    "quantity": 1,
+    "unit_price": 10.700000000000001,
+    "total_price": 10.7,
+    "addons": [
+      {
+        "name": "SOY MILK",
+        "price": 0.7
+      },
+      {
+        "name": "OAT MILK",
+        "price": 0.7
+      }
+    ],
+    "size_name": "Regular",
+    "size_price": null
+  }
+]

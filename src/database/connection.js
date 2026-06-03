@@ -7,7 +7,7 @@ const connectionConfig = process.env.MYSQL_URL || process.env.DATABASE_URL ? {
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'railway',
+  database: process.env.DB_NAME || 'restaurantpos',
   port: process.env.DB_PORT || 3306
 };
 
@@ -24,15 +24,15 @@ const originalExecute = pool.execute.bind(pool);
 const originalQuery = pool.query.bind(pool);
 
 pool.execute = async (sql, params) => {
-  const processedParams = Array.isArray(params) 
-    ? params.map(p => p === undefined ? null : p) 
+  const processedParams = Array.isArray(params)
+    ? params.map(p => p === undefined ? null : p)
     : params;
   return originalExecute(sql, processedParams);
 };
 
 pool.query = async (sql, params) => {
-  const processedParams = Array.isArray(params) 
-    ? params.map(p => p === undefined ? null : p) 
+  const processedParams = Array.isArray(params)
+    ? params.map(p => p === undefined ? null : p)
     : params;
   return originalQuery(sql, processedParams);
 };
@@ -43,7 +43,7 @@ pool.query = async (sql, params) => {
   try {
     connection = await pool.getConnection();
     console.log('Connected to MySQL database: ' + (process.env.DB_NAME || 'restaurantpos'));
-    
+
     // Auto-fix schema for settlements.id if AUTO_INCREMENT is missing
     try {
       const [columns] = await connection.execute('DESCRIBE settlements');

@@ -49,6 +49,21 @@ class TasksController {
     }
   }
 
+  async updateTask(req, res) {
+    try {
+      await tasksService.updateTask(req.params.id, req.body);
+      res.json({
+        success: true,
+        message: 'Task updated successfully'
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
   async deleteTask(req, res) {
     try {
       await tasksService.deleteTask(req.params.id);

@@ -78,8 +78,11 @@ class TablesService {
         }
       }
     } else if (status === 'available') {
-      // If table becomes available, we might want to mark the pending order as cancelled or handled
-      // But usually it's handled via "Finalize" in the UI which marks it as paid.
+      // Mark the active pending order as paid so the session closes completely
+      await pool.execute(
+        'UPDATE orders SET payment_status = "paid" WHERE table_id = ? AND payment_status = "pending" AND deletedAt IS NULL',
+        [id]
+      );
     }
 
     // Notify all clients about table status change
@@ -116,6 +119,33 @@ class TablesService {
     };
 
     return await tablesModel.create(payload);
+  }
+
+  async updateTable(id, data) {
+    let zone_id = data.zone_id || null;
+
+    if (data.floor && !zone_id) {
+      const zones = await tablesModel.getZones();
+      let zone = zones.find(z => z.zone_name.toLowerCase() === data.floor.toLowerCase());
+      
+      if (zone) {
+        zone_id = zone.id;
+      } else {
+        const [result] = await pool.execute(
+          'INSERT INTO table_zones (zone_name) VALUES (?)',
+          [data.floor]
+        );
+        zone_id = result.insertId;
+      }
+    }
+
+    const payload = {
+      table_code: data.name,
+      capacity: data.capacity,
+      zone_id: zone_id || 1
+    };
+
+    return await tablesModel.update(id, payload);
   }
 
   async deleteTable(id) {

@@ -4,8 +4,8 @@ const { sendSuccess, sendError } = require('../../utils/response.formatter');
 class OrdersController {
   async getAllOrders(req, res) {
     try {
-      const { status, customerId, userId } = req.query;
-      const orders = await ordersService.getAllOrders({ status, customerId, userId });
+      const { status, customerId, userId, paymentStatus, tableId } = req.query;
+      const orders = await ordersService.getAllOrders({ status, customerId, userId, paymentStatus, tableId });
       const mappedOrders = orders.map(order => ({
         ...order,
         serviceChargePercent: order.service_charge_percent,
@@ -35,6 +35,7 @@ class OrdersController {
   async createOrder(req, res) {
     try {
       const { orderData, items } = req.body;
+      require('fs').appendFileSync('debug.log', "ITEMS RECEIVED IN BACKEND: " + JSON.stringify(items, null, 2) + "\n");
       const { orderId, serviceChargeAmount, grandTotal } = await ordersService.createOrder(orderData, items);
       return sendSuccess(res, 'Order created successfully', { 
         id: orderId,

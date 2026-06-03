@@ -20,6 +20,18 @@ class MenuService {
   async deleteItem(id) {
     return await menuModel.softDelete(id);
   }
+
+  async createCategory(data) {
+    return await menuModel.createCategory(data);
+  }
+
+  async updateCategory(id, data) {
+    return await menuModel.updateCategory(id, data);
+  }
+
+  async deleteCategory(id) {
+    return await menuModel.deleteCategory(id);
+  }
 }
 
 module.exports = new MenuService();

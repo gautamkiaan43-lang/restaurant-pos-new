@@ -19,7 +19,7 @@ const notificationRoutes = require('../modules/notifications/notifications.route
 const serviceRoutes = require('../modules/services/services.routes');
 const serviceBookingRoutes = require('../modules/services/service-bookings.routes');
 const settingsRoutes = require('../modules/settings/settings.routes');
-const paymentRoutes = require('./payment.routes');
+const houseAccountRoutes = require('../modules/house-accounts/house-accounts.routes');
 
 // Use routes
 router.use('/auth', authRoutes);
@@ -39,6 +39,6 @@ router.use('/notifications', notificationRoutes);
 router.use('/services', serviceRoutes);
 router.use('/service-bookings', serviceBookingRoutes);
 router.use('/settings', settingsRoutes);
-router.use('/payment', paymentRoutes);
+router.use('/house-accounts', houseAccountRoutes);
 
 module.exports = router;
