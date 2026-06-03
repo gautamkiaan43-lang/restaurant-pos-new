@@ -35,9 +35,7 @@ class OrdersRepository extends BaseModel {
     const orderIds = rows.map(r => r.id);
     const placeholders = orderIds.map(() => '?').join(',');
     const [itemsRows] = await pool.execute(`
-      SELECT oi.order_id, oi.id, oi.menu_item_id, mi.item_name, mi.image,
-             oi.quantity, oi.unit_price, oi.total_price, oi.kitchen_status,
-             oi.addons, oi.size_name, oi.size_price
+      SELECT oi.order_id, oi.id, oi.menu_item_id, mi.item_name, oi.quantity, oi.unit_price, oi.total_price, oi.kitchen_status
       FROM order_items oi
       JOIN menu_items mi ON oi.menu_item_id = mi.id
       WHERE oi.order_id IN (${placeholders}) AND oi.deletedAt IS NULL
