@@ -110,6 +110,50 @@ class AuthController {
       data: req.user
     });
   }
+  async updateCredentials(req, res) {
+    try {
+      const userId = req.user.id; // From auth middleware
+      const { email, currentPassword, newPassword } = req.body;
+      
+      if (!currentPassword) {
+        return res.status(400).json({
+          success: false,
+          message: 'Current password is required'
+        });
+      }
+
+      await authService.updateCredentials(userId, email, currentPassword, newPassword);
+
+      res.json({
+        success: true,
+        message: 'Credentials updated successfully'
+      });
+    } catch (err) {
+      res.status(400).json({
+        success: false,
+        message: err.message
+      });
+    }
+  }
+
+  async updateAvatar(req, res) {
+    try {
+      const userId = req.user.id;
+      if (!req.file) {
+        return res.status(400).json({ success: false, message: 'No file uploaded' });
+      }
+      // Build public URL path
+      const avatarUrl = `/uploads/profiles/${req.file.filename}`;
+      await authService.updateAvatar(userId, avatarUrl);
+      res.json({
+        success: true,
+        message: 'Avatar updated successfully',
+        data: { avatar: avatarUrl }
+      });
+    } catch (err) {
+      res.status(500).json({ success: false, message: err.message });
+    }
+  }
 }
 
 module.exports = new AuthController();

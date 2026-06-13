@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const { OAuth2Client } = require('google-auth-library');
 const authModel = require('./auth.model');
+const pool = require('../../database/connection');
 
 class AuthService {
   async login(email, password) {
@@ -228,8 +229,56 @@ class AuthService {
       token
     };
   }
+
+  async updateCredentials(userId, newEmail, currentPassword, newPassword) {
+    // Get user by id
+    const [rows] = await pool.execute('SELECT * FROM users WHERE id = ? AND deletedAt IS NULL', [userId]);
+    if (rows.length === 0) {
+      throw new Error('User not found');
+    }
+    const user = rows[0];
+
+    // Verify current password
+    const isMatch = await bcrypt.compare(currentPassword, user.password);
+    if (!isMatch) {
+      throw new Error('Incorrect current password');
+    }
+
+    // Check if new email is taken by another user
+    if (newEmail && newEmail !== user.email) {
+      const [emailRows] = await pool.execute('SELECT id FROM users WHERE email = ? AND id != ? AND deletedAt IS NULL', [newEmail, userId]);
+      if (emailRows.length > 0) {
+        throw new Error('Email is already in use by another account');
+      }
+    }
+
+    // Hash new password if provided
+    const finalEmail = newEmail || user.email;
+    
+    if (newPassword) {
+      const hashedNewPassword = await bcrypt.hash(newPassword, 10);
+      await pool.execute(
+        'UPDATE users SET email = ?, password = ? WHERE id = ?',
+        [finalEmail, hashedNewPassword, userId]
+      );
+    } else {
+      await pool.execute(
+        'UPDATE users SET email = ? WHERE id = ?',
+        [finalEmail, userId]
+      );
+    }
+
+    return true;
+  }
+
+  async updateAvatar(userId, avatarPath) {
+    // avatarPath is the relative URL path e.g. /uploads/profiles/xxx.jpg
+    await pool.execute(
+      'UPDATE users SET avatar = ? WHERE id = ?',
+      [avatarPath, userId]
+    );
+    return avatarPath;
+  }
 }
 
 module.exports = new AuthService();
-
-

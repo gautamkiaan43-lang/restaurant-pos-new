@@ -31,9 +31,18 @@ const authenticate = async (req, res, next) => {
     req.user = rows[0];
     next();
   } catch (err) {
-    return res.status(401).json({
+    // Return 401 only for token errors, so DB failures don't log the user out
+    if (err.name === 'JsonWebTokenError' || err.name === 'TokenExpiredError') {
+      return res.status(401).json({
+        success: false,
+        message: 'Unauthorized: ' + err.message
+      });
+    }
+    
+    console.error('Database/Server Error in Auth Middleware:', err);
+    return res.status(500).json({
       success: false,
-      message: 'Unauthorized: ' + err.message
+      message: 'Internal server error: ' + err.message
     });
   }
 };

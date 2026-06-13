@@ -10,6 +10,7 @@ class TablesModel extends BaseModel {
     const sql = `
       SELECT t.*, z.zone_name, 
              o.id as active_order_id, o.grand_total as total, o.createdAt as session_start,
+             o.subtotal, o.tax, o.service_charge_amount as service_charge, o.discount,
              r.booking_time as reservation_time,
              COALESCE(g_res.full_name, g_ord.full_name) as reserved_by,
              g_ord.full_name as customer_name

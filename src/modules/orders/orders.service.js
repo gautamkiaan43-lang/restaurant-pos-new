@@ -18,23 +18,13 @@ class OrdersService {
     //    addon prices are added separately per item
     const calculatedSubtotal = items.reduce((sum, item) => {
       const base = parseFloat(item.unit_price) * parseInt(item.quantity);
-
-      // Sum selected addon prices for this item
-      let addonTotal = 0;
-      if (item.addons) {
-        const parsedAddons = typeof item.addons === 'string'
-          ? (() => { try { return JSON.parse(item.addons); } catch { return []; } })()
-          : (Array.isArray(item.addons) ? item.addons : []);
-        addonTotal = parsedAddons.reduce((s, a) => s + (parseFloat(a.price) || 0), 0) * parseInt(item.quantity);
-      }
-
-      return sum + base + addonTotal;
+      return sum + base;
     }, 0);
 
     const discount = parseFloat(orderData.discount) || 0;
     const tax = parseFloat(orderData.tax) || 0;
 
-    // Support both camelCase and snake_case for service charge percent
+    // Support both camelCase and snake_case for service charge percent and amount
     let serviceChargePercent = 0;
     if (orderData.serviceChargePercent !== undefined) {
       serviceChargePercent = parseFloat(orderData.serviceChargePercent);
@@ -42,12 +32,19 @@ class OrdersService {
       serviceChargePercent = parseFloat(orderData.service_charge_percent);
     }
 
-    // Validate percent is only allowed values [0, 5, 10, 30]
-    if (![0, 5, 10, 30].includes(serviceChargePercent)) {
-      throw new Error('Invalid service charge percentage. Allowed values are 0, 5, 10, 30.');
+    let serviceChargeAmount = 0;
+    if (orderData.serviceChargeAmount !== undefined) {
+      serviceChargeAmount = parseFloat(orderData.serviceChargeAmount);
+    } else if (orderData.service_charge_amount !== undefined) {
+      serviceChargeAmount = parseFloat(orderData.service_charge_amount);
+    } else if (serviceChargePercent > 0) {
+      // Validate percent is only allowed values [0, 5, 10, 30] if calculated automatically
+      if (![0, 5, 10, 30].includes(serviceChargePercent)) {
+        throw new Error('Invalid service charge percentage. Allowed values are 0, 5, 10, 30.');
+      }
+      serviceChargeAmount = parseFloat((calculatedSubtotal * (serviceChargePercent / 100)).toFixed(2));
     }
 
-    const serviceChargeAmount = parseFloat((calculatedSubtotal * (serviceChargePercent / 100)).toFixed(2));
     const grandTotal = parseFloat((calculatedSubtotal + tax - discount + serviceChargeAmount).toFixed(2));
 
     // Prepare data for database insertion (matching DB column names)
@@ -145,17 +142,10 @@ class OrdersService {
           ? (typeof item.addons === 'string' ? item.addons : JSON.stringify(item.addons))
           : null;
 
-        // Calculate total_price = (unit_price + addon prices) × qty
-        let addonPricePerUnit = 0;
-        if (item.addons) {
-          const parsedAddons = typeof item.addons === 'string'
-            ? (() => { try { return JSON.parse(item.addons); } catch { return []; } })()
-            : (Array.isArray(item.addons) ? item.addons : []);
-          addonPricePerUnit = parsedAddons.reduce((s, a) => s + (parseFloat(a.price) || 0), 0);
-        }
+        // Calculate total_price = unit_price × qty (unit_price already includes addons from frontend)
         const itemUnitPrice = parseFloat(item.unit_price);
         const itemQty = parseInt(item.quantity);
-        const computedTotalPrice = parseFloat(((itemUnitPrice + addonPricePerUnit) * itemQty).toFixed(2));
+        const computedTotalPrice = parseFloat((itemUnitPrice * itemQty).toFixed(2));
 
         await connection.execute(
           `INSERT INTO order_items 
